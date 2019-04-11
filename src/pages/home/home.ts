@@ -78,7 +78,7 @@ export class HomePage {
             }
           })
           .catch(e => console.log(e));
-          db.executeSql('SELECT SUM(amount) AS totalExpense FROM expense WHERE type="expense"',[])
+          db.executeSql('SELECT SUM(amount) AS totalExpense FROM expense WHERE type="Expense"',[])
           .then(res =>{
             if(res.rows.length>0){
               this.totalExpense=parseInt(res.rows.item(0).totalExpense);
